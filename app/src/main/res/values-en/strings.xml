@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Canchas</string>
+    <string name="contraseña">Password</string>
+    <string name="signIn">Sign In</string>
+    <string name="signUp">Don\'t you have an user yet? Sign up</string>
+    <string name="usuario">User</string>
+    <string name="clave">Password</string>
+    <string name="correo">Email</string>
+    <string name="nombre">Name</string>
+    <string name="telefono">Phone</string>
+    <string name="user">User</string>
+</resources>

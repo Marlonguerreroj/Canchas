@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Canchas</string>
+    <string name="usuario">Usuario</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="signIn">Iniciar Sesión</string>
+    <string name="signUp">¿No tiene un usuario? Registrese aquí</string>
+    <string name="nombre">Nombre</string>
+    <string name="correo">Correo Electrónico</string>
+    <string name="telefono">Teléfono</string>
+</resources>
