@@ -5,9 +5,13 @@
     <string name="signIn">Sign In</string>
     <string name="signUp">Don\'t you have an user yet? Sign up</string>
     <string name="usuario">User</string>
-    <string name="clave">Password</string>
     <string name="correo">Email</string>
     <string name="nombre">Name</string>
     <string name="telefono">Phone</string>
-    <string name="user">User</string>
+    <string name="registrar">Register</string>
+    <string name="confirmarContra">Confirm Password</string>
+    <string name="actDatos">Update data</string>
+    <string name="action_settings"></string>
+    <string name="cerrarSesion">Log out</string>
+    <string name="historial">History</string>
 </resources>

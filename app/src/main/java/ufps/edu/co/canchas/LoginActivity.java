@@ -10,22 +10,30 @@ import android.view.WindowManager;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private AppCompatTextView txtSignUp;
+    private AppCompatTextView lblSignUp;
+    private AppCompatButton btnLogIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        txtSignUp = (AppCompatTextView) findViewById(R.id.SignUp);
-        txtSignUp.setOnClickListener(this);
+        lblSignUp = (AppCompatTextView) findViewById(R.id.lblSignUp);
+        btnLogIn = (AppCompatButton) findViewById(R.id.btnLogIn);
+        lblSignUp.setOnClickListener(this);
+        btnLogIn.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.SignUp:
-                Intent intent1 = new Intent(this,Signup.class);
-                startActivity(intent1);
+        Intent intent;
+        switch (v.getId()) {
+            case R.id.lblSignUp:
+                intent = new Intent(this, Signup.class);
+                startActivity(intent);
+                break;
+            case R.id.btnLogIn:
+                intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
                 break;
 
         }

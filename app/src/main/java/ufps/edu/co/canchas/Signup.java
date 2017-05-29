@@ -1,27 +1,35 @@
 package ufps.edu.co.canchas;
 
+import android.content.Intent;
 import android.support.v7.app.*;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatButton;
+import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatSpinner;
+import android.view.View;
 import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
 
-public class Signup extends AppCompatActivity {
+public class Signup extends AppCompatActivity implements View.OnClickListener {
+    private AppCompatButton registrar;
 
-    private AppCompatSpinner departamentos;
-    private ArrayList<String> spinnerArray = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        spinnerArray.add("Departamentos");
-        spinnerArray.add("Norte de Santander");
-        spinnerArray.add("Santander");
-        departamentos = (AppCompatSpinner) findViewById(R.id.departamentos);
-        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, spinnerArray);
-        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        departamentos.setAdapter(spinnerArrayAdapter);
+        registrar = (AppCompatButton) findViewById(R.id.registrar);
+        registrar.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.registrar:
+                Intent intent1 = new Intent(this, LoginActivity.class);
+                startActivity(intent1);
+                break;
+        }
     }
 }

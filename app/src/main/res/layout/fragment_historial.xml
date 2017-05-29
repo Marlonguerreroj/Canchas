@@ -1,0 +1,129 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_span="3"
+    android:stretchColumns="3"
+    tools:context="ufps.edu.co.canchas.HistorialFragment">
+
+    <TableRow
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Cancha"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Estado"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Acción"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Nombre - Ubicación" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Cancelada" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="-" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Nombre - Ubicación" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Apartada" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Cancelar" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Nombre - Ubicación" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Usada" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="-" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Nombre - Ubicación" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Pagada" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Devolución" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/volver"
+            android:text="Volver" />
+
+    </TableRow>
+
+
+</TableLayout>

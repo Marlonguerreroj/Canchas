@@ -12,7 +12,8 @@
         android:focusableInTouchMode="true"
         android:orientation="vertical"
         android:paddingLeft="16dp"
-        android:paddingRight="16dp">
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp">
 
         <android.support.v7.widget.AppCompatImageView
             android:layout_width="match_parent"
@@ -24,6 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:fontFamily="serif"
             android:gravity="center"
             android:hint="@string/usuario" />
 
@@ -31,18 +33,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:fontFamily="serif"
             android:gravity="center"
-            android:hint="@string/contraseña" />
+            android:hint="@string/contraseña"
+            android:password="true" />
 
         <android.support.v7.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="@string/signIn" />
+            android:text="@string/signIn"
+            android:id="@+id/btnLogIn"/>
 
         <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/SignUp"
+            android:id="@+id/lblSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

@@ -2,9 +2,88 @@
     <string name="app_name">Canchas</string>
     <string name="usuario">Usuario</string>
     <string name="contraseña">Contraseña</string>
+    <string name="confirmarContra">Confirmar Contraseña</string>
     <string name="signIn">Iniciar Sesión</string>
     <string name="signUp">¿No tiene un usuario? Registrese aquí</string>
     <string name="nombre">Nombre</string>
     <string name="correo">Correo Electrónico</string>
     <string name="telefono">Teléfono</string>
+    <string name="registrar">Registrar</string>
+    <string name="historial">Mi Historial</string>
+    <string name="actDatos">Actualizar Datos</string>
+    <string name="cerrarSesion">Cerrar Sesión</string>
+    <string name="dpto">Departamento</string>
+
+    <string name="title_activity_main">@string/app_name</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="buscar">Buscar</string>
+    <string name="valoracion">Valoración</string>
+    <string name="sel_fecha">Seleccionar fecha</string>
+    <string name="sel_hora">Seleccionar Hora</string>
+    <string name="ver_mas">Ver Mas</string>
+    <string name="descripcion">Descripción:</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar massa vitae sem dictum luctus. Maecenas vitae facilisis lectus. Etiam faucibus augue urna, eu condimentum lorem tempor in.</string>
+    <string name="como_llegar">¿Cómo llegar?</string>
+    <string name="comentarios">Comentarios</string>
+    <string name="fotog">Fotografías:</string>
+    <string name="lorem2">Nullam semper, risus ac ornare placerat, dui nisl elementum nibh, a bibendum dolor purus porta urna. Cras laoreet, risus eget pulvinar consequat, ligula nulla convallis urna, at commodo lacus nibh quis augue.</string>
+    <string name="apartar">Apartar</string>
+    <string name="volver">Volver</string>
+
+    <string-array name="tamano">
+        <item>Tamaño</item>
+        <item>Futbol 5</item>
+        <item>Futbol 9</item>
+    </string-array>
+
+    <string-array name="departamentos">
+        <item>Departamento</item>
+        <item>Norte de Santander</item>
+        <item>Santander</item>
+    </string-array>
+
+    <string-array name="ciudades">
+        <item>Ciudad</item>
+        <item>Cúcuta</item>
+        <item>Bucaramanga</item>
+    </string-array>
+
+    <string-array name="hora">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="jornada">
+        <item>AM</item>
+        <item>PM</item>
+    </string-array>
+
+    <string-array name="minutos">
+        <item>00</item>
+        <item>30</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="nuev_Contra">Nueva Contraseña</string>
+    <string name="rep_Clave">Repita la Nueva Clave</string>
+    <string name="actualizar">actualizar</string>
+
+
 </resources>
