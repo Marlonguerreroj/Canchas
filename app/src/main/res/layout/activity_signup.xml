@@ -28,6 +28,7 @@
             android:layout_marginTop="20dp"
             android:fontFamily="serif"
             android:gravity="center"
+            android:id="@+id/txtNombre"
             android:hint="@string/nombre" />
 
         <android.support.v7.widget.AppCompatEditText
@@ -35,6 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="serif"
+            android:id="@+id/txtEmail"
             android:gravity="center"
             android:hint="@string/correo" />
 
@@ -44,6 +46,7 @@
             android:layout_marginTop="20dp"
             android:fontFamily="serif"
             android:gravity="center"
+            android:id="@+id/txtUsuario"
             android:hint="@string/usuario" />
 
         <android.support.v7.widget.AppCompatEditText
@@ -52,17 +55,10 @@
             android:layout_marginTop="20dp"
             android:fontFamily="serif"
             android:gravity="center"
+            android:id="@+id/txtContrasena"
             android:hint="@string/contraseña"
             android:password="true" />
 
-        <android.support.v7.widget.AppCompatEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="serif"
-            android:gravity="center"
-            android:hint="@string/confirmarContra"
-            android:password="true" />
 
         <android.support.v7.widget.AppCompatEditText
             android:layout_width="match_parent"
@@ -71,6 +67,7 @@
             android:fontFamily="serif"
             android:gravity="center"
             android:hint="@string/telefono"
+            android:id="@+id/txtTelefono"
             android:phoneNumber="true" />
 
 

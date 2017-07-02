@@ -4,14 +4,30 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import ufps.edu.co.canchas.dto.CanchaDTO;
+import ufps.edu.co.canchas.dto.UsuarioDTO;
 
 
 /**
@@ -30,6 +46,7 @@ public class homeFragment extends Fragment {
 
     private ExpandableListView expandableListView;
     private ExpandableListAdapter expandableListAdapter;
+    private RequestQueue queue;
     private List<String> listDataHeader;
     private HashMap<String, Cancha> listHashMap;
 
@@ -64,6 +81,7 @@ public class homeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        queue = Volley.newRequestQueue(getActivity());
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -79,26 +97,55 @@ public class homeFragment extends Fragment {
         initData();
         expandableListAdapter = new ExpandableListAdapter(getActivity(), listDataHeader,listHashMap);
         expandableListView.setAdapter(expandableListAdapter);
-        expandableListView.expandGroup(0);
-        expandableListView.expandGroup(1);
+
+
         return v;
     }
 
     private void initData(){
         listDataHeader = new ArrayList<>();
         listHashMap = new HashMap<>();
+        JsonArrayRequest getRequest = new JsonArrayRequest(Request.Method.GET, Constant.URL_LISTAR_CANCHAS, null,
+                new Response.Listener<JSONArray>()
+                {
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        // display response
+                        Gson g = new Gson();
+                        CanchaDTO[] dto = g.fromJson(response.toString(), CanchaDTO[].class);
+                        Log.i("response",response.toString());
+                        int i = 0;
+                        while(i< dto.length){
+                            Log.i("Descripcion",dto[i].getDescripcion());
+                            float valoracion = (float) dto[i].getValoracionGeneral();
+                            Cancha cancha = new Cancha(dto[i].getEstablecimiento().getNombre(), "Ubicación: "+dto[i].getEstablecimiento().getCiudad(), valoracion);
+                            listDataHeader.add((i+1)+"- "+cancha.getNombre());
+                            listHashMap.put(listDataHeader.get(i),cancha);
+                            if(i == 1 || i == 0){
+                                expandableListView.expandGroup(i);
+                            }
+                            Log.i("add",""+i);
+                            i++;
+                        }
+                        i=0;
+                        while(i< listDataHeader.size()){
+                            Log.i("ListDataHeader",listDataHeader.get(i));
+                            i++;
+                        }
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.i("Error.Response", "Error: "+error.getMessage());
+                    }
+                }
+        );
+        queue.add(getRequest);
 
-        Cancha cancha1 = new Cancha("Nombre de la cancha 1","Ubicación: Ciudad", (float) 1.5);
-        Cancha cancha2 = new Cancha("Nombre de la cancha 2","Ubicación: Ciudad",2 );
-        Cancha cancha3 = new Cancha("Nombre de la cancha 3","Ubicación: Ciudad",3 );
 
-        listDataHeader.add(cancha1.getNombre());
-        listDataHeader.add(cancha2.getNombre());
-        listDataHeader.add(cancha3.getNombre());
 
-        listHashMap.put(listDataHeader.get(0),cancha1);
-        listHashMap.put(listDataHeader.get(1),cancha2);
-        listHashMap.put(listDataHeader.get(2),cancha3);
 
 
 

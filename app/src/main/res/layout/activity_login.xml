@@ -21,22 +21,28 @@
             android:layout_marginTop="20dp"
             android:src="@drawable/campo" />
 
+
+
         <android.support.v7.widget.AppCompatEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:fontFamily="serif"
+            android:id="@+id/user"
             android:gravity="center"
+            android:layout_marginTop="10dp"
             android:hint="@string/usuario" />
 
         <android.support.v7.widget.AppCompatEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:id="@+id/pass"
             android:fontFamily="serif"
             android:gravity="center"
             android:hint="@string/contraseña"
             android:password="true" />
+
+
 
         <android.support.v7.widget.AppCompatButton
             android:layout_width="wrap_content"

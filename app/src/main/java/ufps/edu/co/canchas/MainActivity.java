@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity
 
     private AppCompatImageView lupa;
     NavigationView navigationView;
+    private String user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity
 
         lupa = (AppCompatImageView) findViewById(R.id.lupa);
         lupa.setOnClickListener(this);
+
+        user = getIntent().getExtras().getString("user");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
